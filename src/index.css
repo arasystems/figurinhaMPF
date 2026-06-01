@@ -1,69 +1,44 @@
-/* ─── Poppins local fonts ───────────────────────────────────────────────── */
 @font-face {
   font-family: 'Poppins';
   src: url('/Poppins-Light.ttf') format('truetype');
   font-weight: 300;
-  font-style: normal;
 }
 @font-face {
   font-family: 'Poppins';
   src: url('/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600;
-  font-style: normal;
 }
 @font-face {
   font-family: 'Poppins';
   src: url('/Poppins-Bold.ttf') format('truetype');
   font-weight: 700;
-  font-style: normal;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body, #root {
-  height: 100%;
-  min-height: 100vh;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; min-height: 100vh; }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #002A1C;
-  color: #EFF1F2;
+  background: #000D28;
+  color: #F5F7FA;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #002A1C; }
-::-webkit-scrollbar-thumb { background: #006643; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #23C35F; }
+::-webkit-scrollbar-track { background: #000D28; }
+::-webkit-scrollbar-thumb { background: #00296B; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #CFB535; }
 
-/* Input focus */
 input[type="text"]:focus {
-  border-color: #29EC72 !important;
-  box-shadow: 0 0 0 3px rgba(41, 236, 114, 0.12);
+  border-color: #CFB535 !important;
+  box-shadow: 0 0 0 3px rgba(207, 181, 53, 0.12);
 }
+input[type="text"]::placeholder { color: #B8C4D0; opacity: 0.5; }
 
-input[type="text"]::placeholder {
-  color: #D1D2D5;
-  opacity: 0.5;
-}
+@keyframes spin  { to { transform: rotate(360deg); } }
+@keyframes slide { 0% { transform: translateX(-200%); } 100% { transform: translateX(400%); } }
 
-/* Animations */
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-@keyframes slide {
-  0%   { transform: translateX(-200%); }
-  100% { transform: translateX(400%); }
-}
-
-/* Button hover */
 button:not(:disabled):hover {
-  filter: brightness(1.08);
+  filter: brightness(1.07);
   transform: translateY(-1px);
   transition: all 0.15s ease;
 }

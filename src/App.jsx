@@ -156,7 +156,7 @@ export default function App() {
           <span style={S.emoji}>⚽</span>
           <div>
             <h1 style={S.title}>FIGURINHA DA COPA</h1>
-            <p style={S.subtitle}>Copa do Mundo 2026 · Crie a sua figurinha personalizada</p>
+            <p style={S.subtitle}>Copa do Mundo 2026 · Crie a sua cartinha personalizada</p>
           </div>
         </div>
       </header>
@@ -218,51 +218,51 @@ export default function App() {
   )
 }
 
-// ─── Color palette ───────────────────────────────────────────────────────────
-// #EFF1F2  light gray (text on dark)
-// #D1D2D5  muted gray (secondary text, borders)
-// #C9EED9  light mint (subtle tints)
-// #29EC72  bright green (accents, active)
-// #23C35F  medium green (buttons, highlights)
-// #006643  dark green (header, cards)
-// #00482F  deeper green (hover, borders)
-// #002A1C  very dark green (page background)
+// ─── MPF Color palette ───────────────────────────────────────────────────────
+// #F5F7FA  off-white (main text)
+// #B8C4D0  light blue-gray (secondary text, muted)
+// #CFB535  gold (accents, active highlights)
+// #F0D060  bright gold (hover, glow)
+// #003A7A  medium navy (buttons, cards)
+// #00296B  dark navy (header, panels)
+// #001A44  deeper navy (borders, hover)
+// #000D28  very dark navy (page background)
 
 const S = {
-  root:        { minHeight:'100vh', display:'flex', flexDirection:'column', fontFamily:"'Poppins',sans-serif", background:'#002A1C' },
-  header:      { background:'linear-gradient(90deg,#00482F,#006643)', borderBottom:'3px solid #29EC72', padding:'16px 24px' },
+  root:        { minHeight:'100vh', display:'flex', flexDirection:'column', fontFamily:"'Poppins',sans-serif", background:'#000D28' },
+  header:      { background:'linear-gradient(90deg,#001A44,#00296B)', borderBottom:'3px solid #CFB535', padding:'16px 24px' },
   headerInner: { maxWidth:1100, margin:'0 auto', display:'flex', alignItems:'center', gap:16 },
   emoji:       { fontSize:40, lineHeight:1 },
-  title:       { fontFamily:"'Poppins',sans-serif", fontSize:'1.9rem', fontWeight:700, letterSpacing:'0.04em', color:'#29EC72', lineHeight:1 },
-  subtitle:    { fontSize:'0.95rem', fontWeight:300, color:'#C9EED9', marginTop:3 },
+  title:       { fontFamily:"'Poppins',sans-serif", fontSize:'1.9rem', fontWeight:700, letterSpacing:'0.04em', color:'#CFB535', lineHeight:1 },
+  subtitle:    { fontSize:'0.95rem', fontWeight:300, color:'#B8C4D0', marginTop:3 },
   main:        { flex:1, maxWidth:1100, margin:'0 auto', width:'100%', padding:'32px 16px', display:'flex', gap:40, alignItems:'flex-start', flexWrap:'wrap', justifyContent:'center' },
   previewSection: { display:'flex', flexDirection:'column', alignItems:'center', gap:12 },
-  previewLabel:   { fontSize:'0.75rem', fontWeight:600, color:'#23C35F', textTransform:'uppercase', letterSpacing:'0.1em' },
-  canvasWrap:  { position:'relative', borderRadius:14, overflow:'hidden', boxShadow:'0 0 0 1px #00482F, 0 0 40px rgba(41,236,114,0.12), 0 24px 64px rgba(0,0,0,0.6)', userSelect:'none' },
+  previewLabel:   { fontSize:'0.75rem', fontWeight:600, color:'#CFB535', textTransform:'uppercase', letterSpacing:'0.1em' },
+  canvasWrap:  { position:'relative', borderRadius:14, overflow:'hidden', boxShadow:'0 0 0 1px #001A44, 0 0 40px rgba(207,181,53,0.1), 0 24px 64px rgba(0,0,0,0.7)', userSelect:'none' },
   canvas:      { display:'block', width:320, height:'auto', maxWidth:'90vw' },
-  loadOverlay: { position:'absolute', inset:0, background:'rgba(0,42,28,0.92)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:12, color:'#C9EED9', zIndex:10 },
-  spinner:     { width:32, height:32, border:'3px solid rgba(41,236,114,0.15)', borderTop:'3px solid #29EC72', borderRadius:'50%', animation:'spin 0.8s linear infinite' },
+  loadOverlay: { position:'absolute', inset:0, background:'rgba(0,13,40,0.93)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:12, color:'#B8C4D0', zIndex:10 },
+  spinner:     { width:32, height:32, border:'3px solid rgba(207,181,53,0.15)', borderTop:'3px solid #CFB535', borderRadius:'50%', animation:'spin 0.8s linear infinite' },
   zoomRow:     { display:'flex', alignItems:'center', gap:10, width:320, maxWidth:'90vw' },
-  zoomLbl:     { fontSize:'0.8rem', fontWeight:600, color:'#23C35F', minWidth:36, textAlign:'center' },
-  slider:      { flex:1, accentColor:'#29EC72', cursor:'pointer' },
+  zoomLbl:     { fontSize:'0.8rem', fontWeight:600, color:'#CFB535', minWidth:36, textAlign:'center' },
+  slider:      { flex:1, accentColor:'#CFB535', cursor:'pointer' },
   controls:    { flex:'1 1 320px', maxWidth:420, display:'flex', flexDirection:'column', gap:18, minWidth:280 },
-  uploadZone:  { border:'2px dashed #00482F', borderRadius:14, padding:'28px 20px', textAlign:'center', cursor:'pointer', transition:'all 0.2s', background:'rgba(0,72,47,0.3)' },
-  upActive:    { border:'2px dashed #29EC72', background:'rgba(41,236,114,0.08)', transform:'scale(1.01)' },
-  upDone:      { border:'2px solid #23C35F', background:'rgba(35,195,95,0.08)' },
-  upLoading:   { border:'2px dashed #006643', background:'rgba(0,102,67,0.2)', cursor:'not-allowed' },
+  uploadZone:  { border:'2px dashed #001A44', borderRadius:14, padding:'28px 20px', textAlign:'center', cursor:'pointer', transition:'all 0.2s', background:'rgba(0,41,107,0.2)' },
+  upActive:    { border:'2px dashed #CFB535', background:'rgba(207,181,53,0.07)', transform:'scale(1.01)' },
+  upDone:      { border:'2px solid #003A7A', background:'rgba(0,58,122,0.15)' },
+  upLoading:   { border:'2px dashed #00296B', background:'rgba(0,41,107,0.1)', cursor:'not-allowed' },
   upIcon:      { fontSize:36, marginBottom:8 },
-  upTitle:     { fontSize:'1rem', fontWeight:600, color:'#EFF1F2', letterSpacing:'0.01em' },
-  upHint:      { fontSize:'0.8rem', fontWeight:300, color:'#D1D2D5', marginTop:4 },
+  upTitle:     { fontSize:'1rem', fontWeight:600, color:'#F5F7FA', letterSpacing:'0.01em' },
+  upHint:      { fontSize:'0.8rem', fontWeight:300, color:'#B8C4D0', marginTop:4 },
   prog:        { height:4, background:'rgba(255,255,255,0.08)', borderRadius:2, overflow:'hidden', width:'80%', margin:'14px auto 0' },
-  progFill:    { height:'100%', width:'40%', background:'#29EC72', borderRadius:2, animation:'slide 1.2s ease-in-out infinite' },
+  progFill:    { height:'100%', width:'40%', background:'#CFB535', borderRadius:2, animation:'slide 1.2s ease-in-out infinite' },
   divider:     { display:'flex', alignItems:'center', gap:12, margin:'2px 0' },
-  divLine:     { flex:1, height:1, background:'#00482F' },
-  divText:     { fontSize:'0.7rem', fontWeight:600, letterSpacing:'0.18em', color:'#23C35F' },
+  divLine:     { flex:1, height:1, background:'#001A44' },
+  divText:     { fontSize:'0.7rem', fontWeight:600, letterSpacing:'0.18em', color:'#CFB535' },
   fieldGroup:  { display:'flex', flexDirection:'column', gap:7 },
-  fieldLabel:  { fontSize:'0.72rem', fontWeight:600, letterSpacing:'0.1em', color:'#C9EED9', textTransform:'uppercase' },
-  input:       { background:'#00482F', border:'1.5px solid #006643', borderRadius:9, padding:'13px 15px', color:'#EFF1F2', fontSize:'1.1rem', fontFamily:"'Poppins',sans-serif", fontWeight:600, outline:'none', transition:'border-color 0.2s' },
-  hint:        { background:'rgba(0,72,47,0.5)', border:'1px solid #006643', borderRadius:9, padding:'10px 14px', fontSize:'0.82rem', fontWeight:300, color:'#C9EED9', lineHeight:1.7 },
-  dlBtn:       { background:'linear-gradient(135deg,#29EC72,#23C35F)', border:'none', borderRadius:11, padding:'17px', color:'#002A1C', fontSize:'1.2rem', fontFamily:"'Poppins',sans-serif", fontWeight:700, letterSpacing:'0.06em', cursor:'pointer', boxShadow:'0 4px 24px rgba(41,236,114,0.3)' },
+  fieldLabel:  { fontSize:'0.72rem', fontWeight:600, letterSpacing:'0.1em', color:'#B8C4D0', textTransform:'uppercase' },
+  input:       { background:'#001A44', border:'1.5px solid #00296B', borderRadius:9, padding:'13px 15px', color:'#F5F7FA', fontSize:'1.1rem', fontFamily:"'Poppins',sans-serif", fontWeight:600, outline:'none', transition:'border-color 0.2s' },
+  hint:        { background:'rgba(0,41,107,0.3)', border:'1px solid #001A44', borderRadius:9, padding:'10px 14px', fontSize:'0.82rem', fontWeight:300, color:'#B8C4D0', lineHeight:1.7 },
+  dlBtn:       { background:'linear-gradient(135deg,#F0D060,#CFB535)', border:'none', borderRadius:11, padding:'17px', color:'#000D28', fontSize:'1.2rem', fontFamily:"'Poppins',sans-serif", fontWeight:700, letterSpacing:'0.06em', cursor:'pointer', boxShadow:'0 4px 24px rgba(207,181,53,0.25)' },
   dlDisabled:  { opacity:0.4, cursor:'not-allowed' },
-  footer:      { fontSize:'0.72rem', fontWeight:300, color:'#006643', textAlign:'center' },
+  footer:      { fontSize:'0.72rem', fontWeight:300, color:'#001A44', textAlign:'center' },
 }
